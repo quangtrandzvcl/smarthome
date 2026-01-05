@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiApp3.MainPage"
+    BackgroundColor="#F5F7FB">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="PrimaryColor">#6A5AE0</Color>
+            <Color x:Key="SecondaryColor">#8F8CF3</Color>
+            <Color x:Key="CardColor">#FFFFFF</Color>
+            <Color x:Key="TextDark">#1F2937</Color>
+            <Color x:Key="TextGray">#6B7280</Color>
+
+            <x:Double x:Key="TitleFont">22</x:Double>
+            <x:Double x:Key="SubtitleFont">14</x:Double>
+            <x:Double x:Key="CardTitleFont">16</x:Double>
+            <x:Double x:Key="SmallFont">12</x:Double>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="*,Auto">
+
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Padding="20" Spacing="20">
+
+                <Grid ColumnDefinitions="*,Auto">
+                    <VerticalStackLayout>
+                        <Label
+                            Text="Smart Home"
+                            FontSize="{StaticResource TitleFont}"
+                            FontAttributes="Bold"
+                            TextColor="{StaticResource TextDark}" />
+
+                        <Label
+                            Text="5 devices • 3 active"
+                            FontSize="{StaticResource SubtitleFont}"
+                            TextColor="{StaticResource TextGray}" />
+                    </VerticalStackLayout>
+
+                    <Image
+                        Source="settings.png"
+                        HeightRequest="24"
+                        WidthRequest="24"
+                        Grid.Column="1" />
+                </Grid>
+
+                <Frame
+                    .="{StaticResource PrimaryColor}">
+
+                    <Grid ColumnDefinitions="*,Auto">
+                        <VerticalStackLayout Spacing="8">
+                            <Label
+                                Text="Good Evening!"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                TextColor="White" />
+
+                            <Label
+                                Text="Your home is comfortable and secure"
+                                FontSize="{StaticResource SmallFont}"
+                                TextColor="#E5E7EB" />
+
+                            <HorizontalStackLayout Spacing="15">
+                                <Label Text="Secure" TextColor="White" FontSize="{StaticResource SmallFont}" />
+                                <Label Text="89% Efficient" TextColor="White" FontSize="{StaticResource SmallFont}" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Grid.Column="1" HorizontalOptions="End">
+                            <Label
+                                Text="24°C"
+                                FontSize="28"
+                                FontAttributes="Bold"
+                                TextColor="White" />
+                            <Label
+                                Text="Perfect"
+                                FontSize="{StaticResource SmallFont}"
+                                TextColor="White" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
+
+                <Frame
+                    CornerRadius="18"
+                    Padding="6"
+                    BackgroundColor="#E5E7EB"
+                    HasShadow="False">
+
+                    <Grid ColumnDefinitions="*,*,*">
+                        <Frame Grid.Column="0" CornerRadius="14" Padding="10" BackgroundColor="{StaticResource PrimaryColor}">
+                            <Label Text="Compact" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold" />
+                        </Frame>
+
+                        <Frame Grid.Column="1" CornerRadius="14" Padding="10" BackgroundColor="Transparent">
+                            <Label Text="Smart" HorizontalTextAlignment="Center" TextColor="{StaticResource TextGray}" />
+                        </Frame>
+
+                        <Frame Grid.Column="2" CornerRadius="14" Padding="10" BackgroundColor="Transparent">
+                            <Label Text="Premium" HorizontalTextAlignment="Center" TextColor="{StaticResource TextGray}" />
+                        </Frame>
+                    </Grid>
+                </Frame>
+
+                <Label
+                    Text="Compact Control"
+                    FontSize="{StaticResource CardTitleFont}"
+                    FontAttributes="Bold"
+                    TextColor="{StaticResource TextDark}" />
+
+                <Frame CornerRadius="18" Padding="15" BackgroundColor="{StaticResource CardColor}">
+                    <Grid ColumnDefinitions="Auto,*,Auto">
+                        <Image Source="fan.png" HeightRequest="32" />
+                        <VerticalStackLayout Grid.Column="1" Padding="10,0">
+                            <Label Text="Ceiling Fan" FontAttributes="Bold" />
+                            <Label Text="Living Room" FontSize="{StaticResource SmallFont}" TextColor="{StaticResource TextGray}" />
+                        </VerticalStackLayout>
+                        <Switch Grid.Column="2" />
+                    </Grid>
+                </Frame>
+
+                <Frame CornerRadius="18" Padding="15" BackgroundColor="{StaticResource CardColor}">
+                    <Grid ColumnDefinitions="Auto,*,Auto">
+                        <Image Source="ac.png" HeightRequest="32" />
+                        <VerticalStackLayout Grid.Column="1" Padding="10,0">
+                            <Label Text="Air Conditioner" FontAttributes="Bold" />
+                            <Label Text="Bedroom" FontSize="{StaticResource SmallFont}" TextColor="{StaticResource TextGray}" />
+                        </VerticalStackLayout>
+                        <Switch Grid.Column="2" />
+                    </Grid>
+                </Frame>
+
+                <Frame CornerRadius="18" Padding="15" BackgroundColor="{StaticResource CardColor}">
+                    <Grid ColumnDefinitions="Auto,*,Auto">
+                        <Image Source="tv.png" HeightRequest="32" />
+                        <VerticalStackLayout Grid.Column="1" Padding="10,0">
+                            <Label Text="Smart TV" FontAttributes="Bold" />
+                            <Label Text="Living Room" FontSize="{StaticResource SmallFont}" TextColor="{StaticResource TextGray}" />
+                        </VerticalStackLayout>
+                        <Switch Grid.Column="2" />
+                    </Grid>
+                </Frame>
+
+                <Frame CornerRadius="18" Padding="15" BackgroundColor="{StaticResource CardColor}">
+                    <Grid ColumnDefinitions="Auto,*,Auto">
+                        <Image Source="light.png" HeightRequest="32" />
+                        <VerticalStackLayout Grid.Column="1" Padding="10,0">
+                            <Label Text="RGB Lights" FontAttributes="Bold" />
+                            <Label Text="Kitchen" FontSize="{StaticResource SmallFont}" TextColor="{StaticResource TextGray}" />
+                        </VerticalStackLayout>
+                        <Switch Grid.Column="2" />
+                    </Grid>
+                </Frame>
+
+                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" RowSpacing="12" ColumnSpacing="12">
+                    <Frame CornerRadius="16" BackgroundColor="#E0F2FE">
+                        <VerticalStackLayout>
+                            <Label Text="5" FontSize="22" FontAttributes="Bold" />
+                            <Label Text="Active Now" FontSize="{StaticResource SmallFont}" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame Grid.Column="1" CornerRadius="16" BackgroundColor="#ECFDF5">
+                        <VerticalStackLayout>
+                            <Label Text="92%" FontSize="22" FontAttributes="Bold" />
+                            <Label Text="Efficiency" FontSize="{StaticResource SmallFont}" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="1" CornerRadius="16" BackgroundColor="#FDF2F8">
+                        <VerticalStackLayout>
+                            <Label Text="3" FontSize="22" FontAttributes="Bold" />
+                            <Label Text="Family Home" FontSize="{StaticResource SmallFont}" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="1" Grid.Column="1" CornerRadius="16" BackgroundColor="#FFF7ED">
+                        <VerticalStackLayout>
+                            <Label Text="24/7" FontSize="22" FontAttributes="Bold" />
+                            <Label Text="Monitoring" FontSize="{StaticResource SmallFont}" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </Grid>
+
+                <Frame CornerRadius="20" BackgroundColor="{StaticResource CardColor}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="Quick Actions" FontAttributes="Bold" />
+
+                        <HorizontalStackLayout Spacing="10">
+                            <Button
+                                Text="All On"
+                                BackgroundColor="{StaticResource PrimaryColor}"
+                                TextColor="White"
+                                CornerRadius="16"
+                                HorizontalOptions="FillAndExpand" />
+
+                            <Button
+                                Text="Night Mode"
+                                BackgroundColor="#E5E7EB"
+                                TextColor="{StaticResource TextDark}"
+                                CornerRadius="16"
+                                HorizontalOptions="FillAndExpand" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Frame
+            Grid.Row="1"
+            Margin="16,8"
+            Padding="14"
+            CornerRadius="24"
+            HasShadow="True"
+            BackgroundColor="{StaticResource CardColor}">
+
+            <Grid ColumnDefinitions="*,*,*,*">
+                <VerticalStackLayout HorizontalOptions="Center">
+                    <Image Source="home.png" HeightRequest="22" />
+                    <Label Text="Home" FontSize="11" TextColor="{StaticResource PrimaryColor}" FontAttributes="Bold" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+                    <Image Source="rooms.png" HeightRequest="22" />
+                    <Label Text="Rooms" FontSize="11" TextColor="{StaticResource TextGray}" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center">
+                    <Image Source="scenes.png" HeightRequest="22" />
+                    <Label Text="Scenes" FontSize="11" TextColor="{StaticResource TextGray}" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="3" HorizontalOptions="Center">
+                    <Image Source="settings.png" HeightRequest="22" />
+                    <Label Text="Settings" FontSize="11" TextColor="{StaticResource TextGray}" />
+                </VerticalStackLayout>
+            </Grid>
+        </Frame>
+
+    </Grid>
+</ContentPage>
