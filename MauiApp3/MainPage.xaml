@@ -48,10 +48,7 @@
                 </Grid>
 
                 <Frame
-                    CornerRadius="20"
-                    Padding="20"
-                    HasShadow="True"
-                    BackgroundColor="{StaticResource PrimaryColor}">
+                    .="{StaticResource PrimaryColor}">
 
                     <Grid ColumnDefinitions="*,Auto">
                         <VerticalStackLayout Spacing="8">
